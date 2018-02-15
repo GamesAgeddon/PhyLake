@@ -1,0 +1,24 @@
+{
+  "name": "PhyLake",
+  "version": "0.0.1",
+  "description": "PhyLake ",
+  "main": "PhyLake.js",
+  "scripts": {
+    "start": "electron .",
+	"build": "electron-packager . PhyLake --overwrite"
+  },
+  "repository": "https://github.com/GamesAgeddon/PhyLake",
+  "keywords": [
+    "PhyLake",
+    "Jenkins",
+    "Build",
+    "Control",
+    "Observer"
+  ],
+  "author": "GamesAgeddon",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.7.8",
+	"electron-packager": "~11.0.1"
+  }
+}
