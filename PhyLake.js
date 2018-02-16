@@ -10,15 +10,36 @@ let mainWindow;
 
 function startApp() {
   var screenSize = Electron.screen.getPrimaryDisplay().size;
-  var dir = 'file://' + App.getAppPath();
 	
-  // Create the browser window.
-  var mainWindow = new BrowserWindow({frame: true, width: 0.75 * screenSize.width, height: 0.5 * screenSize.height, show: false});
-  mainWindow.loadURL(dir+'/dist/index.html');
+  // Create the main window.
+  var mainWindow = new BrowserWindow({
+    frame: true, 
+    width: 0.75 * 
+    screenSize.width, 
+    height: 0.5 * screenSize.height, 
+    show: false,
+    icon: Path.join(__dirname, 'dist/assets/icons/png/64x64.png')
+  });
+
+  mainWindow.loadURL(URL.format({
+    pathname: Path.join(__dirname, 'dist/index.html'),
+    protocol: 'file:',
+    slashes: true
+  }));
 
   // Create splashscreen
-  var splash = new BrowserWindow({width: 800, height: 600, frame: false, alwaysOnTop: true});
-  splash.loadURL(dir+'/SplashScreen.html');
+  var splash = new BrowserWindow({
+    width: 800, 
+    height: 600, 
+    frame: false, 
+    alwaysOnTop: true
+  });
+  
+  splash.loadURL(URL.format({
+    pathname: Path.join(__dirname, 'SplashScreen.html'),
+    protocol: 'file:',
+    slashes: true
+  }));
   
   // Reset menu
   Menu.setApplicationMenu(null);
