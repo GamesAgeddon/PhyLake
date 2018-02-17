@@ -20,9 +20,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "electron": "electron .",
-    "electron-build": "ng build && electron .",
-    "electron-pack-win": "ng build --prod && electron-packager . PhyLake --overwrite --asar=true --platform=win32 --icon=dist/assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=GamesAgeddon --version-string.FileDescription=GamesAgeddon --version-string.ProductName='PhyLake'"
+    "electron": "ng build && electron .",
+    "electron-aot-win": "ng build --prod && electron-packager . PhyLake --overwrite --asar=true --platform=win32 --icon=dist/assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=GamesAgeddon --version-string.FileDescription=GamesAgeddon --version-string.ProductName='PhyLake'"
   },
   "private": true,
   "dependencies": {
