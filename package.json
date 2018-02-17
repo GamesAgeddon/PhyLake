@@ -45,7 +45,9 @@
     "jquery-slimscroll": "^1.3.8",
     "ng-translate": "^1.0.3",
     "ngx-bootstrap": "^2.0.2",
+    "ngx-electron": "^1.0.4",
     "normalize.css": "^8.0.0",
+    "popper.js": "^1.12.9",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
