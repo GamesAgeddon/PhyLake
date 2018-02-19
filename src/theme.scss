@@ -1,0 +1,30 @@
+@import '~@angular/material/theming';
+
+$phylake-primary: mat-palette($mat-grey, 800, 700, 900);
+//$phylake-primary: mat-palette($mat-pink, 700, 600, 800);
+$phylake-accent:  mat-palette($mat-cyan, A400, 200, A700);
+$phylake-warn:    mat-palette($mat-deep-orange, A400, A200, A700);
+
+$phylake-theme: mat-dark-theme($phylake-primary, $phylake-accent, $phylake-warn);
+
+@mixin phylake-material-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, accent);
+
+    body {
+        background-color: mat-color($primary, darker);
+    }
+
+    .mat-raised-button {
+        background-color: mat-color($primary, lighter);
+    }
+
+    .mat-raised-button:focus {
+        outline: none;
+    }
+}
+
+@include mat-core();
+@include angular-material-theme($phylake-theme);
+@include phylake-material-theme($phylake-theme);
