@@ -22,6 +22,7 @@
         "../node_modules/normalize.css/normalize.css",
         "../node_modules/animate.css/animate.min.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "./assets/fonts/material-icons.css",
         "theme.scss",
         "styles.css"
       ],
