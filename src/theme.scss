@@ -16,12 +16,12 @@ $phylake-theme: mat-dark-theme($phylake-primary, $phylake-accent, $phylake-warn)
         background-color: mat-color($primary, darker);
     }
 
-    .mat-raised-button {
-        background-color: mat-color($primary, lighter);
+    .mat-button:focus, .mat-raised-button:focus, .mat-icon-button:focus, .mat-fab:focus, .mat-mini-fab:focus {
+        outline: none;
     }
 
-    .mat-raised-button:focus {
-        outline: none;
+    .mat-raised-button {
+        background-color: mat-color($primary, lighter);
     }
 }
 
