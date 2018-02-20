@@ -17,7 +17,8 @@ function startApp() {
     height: 600,
     backgroundColor: '#0e0e0e',
     frame: false,
-    alwaysOnTop: true
+    alwaysOnTop: true,
+    icon: Path.join(__dirname, 'dist/assets/icons/png/64x64.png')
   });
 
   splash.loadURL(URL.format({
