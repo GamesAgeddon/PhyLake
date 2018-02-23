@@ -4,7 +4,7 @@ import { MAT_RIPPLE_GLOBAL_OPTIONS, RippleGlobalOptions } from '@angular/materia
 
 import { AppComponent } from './app.component';
 
-const globalRippleConfig: RippleGlobalOptions = {
+const GlobalRippleConfig: RippleGlobalOptions = {
   animation: {
     enterDuration: 300,
     exitDuration: 0
@@ -19,7 +19,7 @@ const globalRippleConfig: RippleGlobalOptions = {
     BrowserModule
   ],
   providers: [
-    {provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig} 
+    {provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: GlobalRippleConfig} 
   ],
   bootstrap: [AppComponent]
 })
