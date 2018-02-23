@@ -11,9 +11,12 @@ $phylake-theme: mat-dark-theme($phylake-primary, $phylake-accent, $phylake-warn)
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
     $warn: map-get($theme, accent);
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
 
-    body {
-        background-color: mat-color($primary, darker);
+    html * {
+       font-family: 'Roboto Condensed' !important;
+       text-rendering: optimizeLegibility;
     }
 
     .mat-button:focus, .mat-raised-button:focus, .mat-icon-button:focus, .mat-fab:focus, .mat-mini-fab:focus {
