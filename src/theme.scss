@@ -16,7 +16,9 @@ $phylake-theme: mat-dark-theme($phylake-primary, $phylake-accent, $phylake-warn)
 
     html * {
        font-family: 'Roboto Condensed' !important;
+       font-weight: lighter;
        text-rendering: optimizeLegibility;
+       overflow: hidden;
     }
 
     .mat-button:focus, .mat-raised-button:focus, .mat-icon-button:focus, .mat-fab:focus, .mat-mini-fab:focus {
