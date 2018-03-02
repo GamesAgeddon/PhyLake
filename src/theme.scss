@@ -10,15 +10,18 @@ $phylake-theme: mat-dark-theme($phylake-primary, $phylake-accent, $phylake-warn)
 @mixin phylake-material-theme($theme) {
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
-    $warn: map-get($theme, accent);
+    $warn: map-get($theme, warn);
     $background: map-get($theme, background);
     $foreground: map-get($theme, foreground);
 
     html * {
-       font-family: 'Roboto Condensed' !important;
-       font-weight: lighter;
-       text-rendering: optimizeLegibility;
-       overflow: hidden;
+        cursor: default;
+        font-family: 'Roboto Condensed' !important;
+        font-weight: lighter;
+        text-rendering: optimizeLegibility;
+        overflow: hidden;
+        user-select: none;
+        -webkit-user-drag: none;
     }
 
     .mat-button:focus, .mat-raised-button:focus, .mat-icon-button:focus, .mat-fab:focus, .mat-mini-fab:focus {

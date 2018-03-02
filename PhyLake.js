@@ -32,6 +32,8 @@ function startApp() {
     frame: true,
     width: 0.75 * screenSize.width,
     height: 0.55 * screenSize.height,
+    minWidth: 600,
+    minHeight: 300,
     show: false,
     icon: Path.join(__dirname, 'dist/assets/icons/png/64x64.png')
   });
