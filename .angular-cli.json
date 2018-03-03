@@ -18,7 +18,6 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "serviceWorker": true,
       "styles": [
         "../node_modules/normalize.css/normalize.css",
         "./assets/fonts/fonts.css",
@@ -59,7 +58,6 @@
   },
   "defaults": {
     "styleExt": "scss",
-    "component": {
-    }
+    "component": {}
   }
 }
