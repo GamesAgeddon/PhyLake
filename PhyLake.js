@@ -18,7 +18,8 @@ function startApp() {
     backgroundColor: '#0e0e0e',
     frame: false,
     alwaysOnTop: true,
-    icon: Path.join(__dirname, 'dist/assets/icons/png/64x64.png')
+    icon: Path.join(__dirname, 'dist/assets/icons/png/64x64.png'),
+    vibrancy: 'ultra-dark',
   });
 
   splash.loadURL(URL.format({
@@ -35,7 +36,8 @@ function startApp() {
     minWidth: 600,
     minHeight: 300,
     show: false,
-    icon: Path.join(__dirname, 'dist/assets/icons/png/64x64.png')
+    icon: Path.join(__dirname, 'dist/assets/icons/png/64x64.png'),
+    vibrancy: 'ultra-dark',
   });
 
   mainWindow.loadURL(URL.format({
