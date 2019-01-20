@@ -13,19 +13,19 @@ function startApp() {
 
   // Create splashscreen
   var splash = new BrowserWindow({
-    width: 800,
-    height: 600,
-    backgroundColor: '#0e0e0e',
+    width: 1116,
+    height: 540,
     frame: false,
     alwaysOnTop: true,
     icon: Path.join(__dirname, 'dist/assets/icons/png/64x64.png'),
+    transparent: true,
     vibrancy: 'ultra-dark',
   });
 
   splash.loadURL(URL.format({
     pathname: Path.join(__dirname, 'SplashScreen.html'),
     protocol: 'file:',
-    slashes: true
+    slashes: true,
   }));
 
   // Create the main window.
@@ -43,7 +43,7 @@ function startApp() {
   mainWindow.loadURL(URL.format({
     pathname: Path.join(__dirname, 'dist/index.html'),
     protocol: 'file:',
-    slashes: true
+    slashes: true,
   }));
 
   // Reset menu
@@ -57,6 +57,7 @@ function startApp() {
   mainWindow.once('ready-to-show', () => {
     splash.destroy();
     mainWindow.show();
+    splash = null;
   });
 
   // Remove main window

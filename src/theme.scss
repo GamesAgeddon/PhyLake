@@ -8,29 +8,44 @@ $phylake-warn:    mat-palette($mat-deep-orange, A400, A200, A700);
 $phylake-theme: mat-dark-theme($phylake-primary, $phylake-accent, $phylake-warn);
 
 @mixin phylake-material-theme($theme) {
-    $primary: map-get($theme, primary);
-    $accent: map-get($theme, accent);
-    $warn: map-get($theme, warn);
-    $background: map-get($theme, background);
-    $foreground: map-get($theme, foreground);
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
 
-    html * {
-        cursor: default;
-        font-family: 'Roboto Condensed' !important;
-        font-weight: lighter;
-        text-rendering: optimizeLegibility;
-        overflow: hidden;
-        user-select: none;
-        -webkit-user-drag: none;
-    }
+  html, body {
+    height: 100%;
+  }
 
-    .mat-button:focus, .mat-raised-button:focus, .mat-icon-button:focus, .mat-fab:focus, .mat-mini-fab:focus {
-        outline: none;
-    }
+  html {
+    opacity: 0.95;
+    background: rgb(26,39,36);
+    background: -moz-linear-gradient(top, rgba(26,39,36,1) 0%, rgba(8,12,11,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(26,39,36,1) 0%,rgba(8,12,11,1) 100%);
+    background: linear-gradient(to bottom, rgba(26,39,36,1) 0%,rgba(8,12,11,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a2724', endColorstr='#080c0b',GradientType=0 );
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 
-    .mat-raised-button {
-        background-color: mat-color($primary, lighter);
-    }
+  html * {
+    cursor: default;
+    font-family: 'Roboto Condensed' !important;
+    font-weight: lighter;
+    text-rendering: optimizeLegibility;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  .mat-button:focus, .mat-raised-button:focus, .mat-icon-button:focus, .mat-fab:focus, .mat-mini-fab:focus {
+    outline: none;
+  }
+
+  .mat-raised-button {
+    background-color: mat-color($primary, lighter);
+  }
 }
 
 @include mat-core();
